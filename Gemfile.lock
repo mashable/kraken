@@ -1,0 +1,320 @@
+GIT
+  remote: git://github.com/cheald/cap-ec2.git
+  revision: 69cd5cdb39ab08d51bf52777c566417257843241
+  branch: raw_filters
+  specs:
+    cap-ec2 (1.0.0)
+      aws-sdk-v1
+      capistrano (>= 3.0)
+      colorize
+      terminal-table
+
+GIT
+  remote: git://github.com/cheald/redis-bloomfilter.git
+  revision: 799238627a79ebb7151f50be04d73141e4e49fd6
+  specs:
+    redis-bloomfilter (0.0.3)
+      hiredis (~> 0.5, >= 0.5.2)
+      redis (~> 3.0, >= 3.0.4)
+
+GIT
+  remote: git://github.com/cheald/rvm.git
+  revision: 472d5974cc39b83590f4092aab1c90b8e76959ac
+  specs:
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+
+GIT
+  remote: git://github.com/cheald/soles.git
+  revision: cc246370ee02e59cecac55840de13cc1a4e55533
+  specs:
+    soles (0.1.0)
+      activesupport (~> 4.0)
+      thor
+
+GIT
+  remote: git://github.com/zendesk/ruby-kafka.git
+  revision: 8c1c8cbfefa4cfd93a5f64155f04cceaefb65d73
+  ref: v0.5.0.beta1
+  specs:
+    ruby-kafka (0.5.0.beta1)
+      gssapi (>= 1.2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.2.9)
+      activesupport (= 4.2.9)
+      builder (~> 3.1)
+    activesupport (4.2.9)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
+    airbrussh (1.3.0)
+      sshkit (>= 1.6.1, != 1.7.0)
+    avro (1.8.2)
+      multi_json
+    avro-builder (0.15.0)
+      avro (>= 1.7.0)
+    avro-patches (0.3.2)
+      avro (= 1.8.2)
+    avro-resolution_canonical_form (0.2.0)
+      avro-patches
+    avro_schema_registry-client (0.3.0)
+      avro-resolution_canonical_form (>= 0.2.0)
+      avro_turf (>= 0.8.0)
+    avro_turf (0.8.0)
+      avro (>= 1.7.7, < 1.9)
+      excon (~> 0.45)
+    avromatic (0.27.0)
+      activemodel (>= 4.1, < 5.2)
+      activesupport (>= 4.1, < 5.2)
+      avro (>= 1.7.7)
+      avro_schema_registry-client (>= 0.3.0)
+      avro_turf
+      virtus
+    awesome_print (1.8.0)
+    aws-sdk (2.10.1)
+      aws-sdk-resources (= 2.10.1)
+    aws-sdk-core (2.10.1)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.10.1)
+      aws-sdk-core (= 2.10.1)
+    aws-sdk-v1 (1.67.0)
+      json (~> 1.4)
+      nokogiri (~> 1)
+    aws-sigv4 (1.0.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt_pbkdf (1.0.0)
+    buftok (0.2.0)
+    bugsnag (5.5.0)
+    builder (3.2.3)
+    capistrano (3.9.0)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    coderay (1.1.1)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    colorize (0.8.1)
+    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.0.5-java)
+    connection_pool (2.2.1)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.3)
+    docile (1.1.5)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
+    equalizer (0.0.11)
+    et-orbi (1.0.5)
+      tzinfo
+    excon (0.58.0)
+    faraday (0.11.0)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
+    ffi (1.9.18)
+    ffi (1.9.18-java)
+    gssapi (1.2.0)
+      ffi (>= 1.0.1)
+    hashdiff (0.3.5)
+    hashie (3.5.6)
+    hiredis (0.6.1)
+    hiredis (0.6.1-java)
+    http (2.2.2)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (1.0.3)
+    http_parser.rb (0.6.0)
+    http_parser.rb (0.6.0-java)
+    i18n (0.8.6)
+    ice_nine (0.11.2)
+    jmespath (1.3.1)
+    json (1.8.6)
+    json (1.8.6-java)
+    jwt (1.5.6)
+    koala (3.0.0)
+      addressable
+      faraday
+      json (>= 1.8)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
+    method_source (0.8.2)
+    mini_portile2 (2.2.0)
+    minitest (5.10.3)
+    multi_json (1.12.1)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    naught (1.1.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.1.0)
+    nokogiri (1.8.0)
+      mini_portile2 (~> 2.2.0)
+    nokogiri (1.8.0-java)
+    oauth2 (1.4.0)
+      faraday (>= 0.8, < 0.13)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry (0.10.4-java)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+      spoon (~> 0.0)
+    public_suffix (2.0.5)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
+    rake (12.0.0)
+    rbnacl (3.4.0)
+      ffi
+    rbnacl-libsodium (1.0.11)
+      rbnacl (>= 3.0.1)
+    redis (3.3.3)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-mocks (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
+    rufus-scheduler (3.4.2)
+      et-orbi (~> 1.0)
+    safe_yaml (1.0.4)
+    sidekiq (5.0.4)
+      concurrent-ruby (~> 1.0)
+      connection_pool (~> 2.2, >= 2.2.0)
+      rack-protection (>= 1.5.0)
+      redis (~> 3.3, >= 3.3.3)
+    simple_oauth (0.3.1)
+    simplecov (0.15.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    slop (3.6.0)
+    slyphon-log4j (1.2.15)
+    slyphon-zookeeper_jar (3.3.5-java)
+    spoon (0.0.6)
+      ffi
+    sshkit (1.14.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
+    thor (0.19.4)
+    thread_safe (0.3.6)
+    thread_safe (0.3.6-java)
+    timecop (0.9.1)
+    twitter (6.1.0)
+      addressable (~> 2.5)
+      buftok (~> 0.2.0)
+      equalizer (= 0.0.11)
+      faraday (~> 0.11.0)
+      http (~> 2.1)
+      http_parser.rb (~> 0.6.0)
+      memoizable (~> 0.4.2)
+      naught (~> 1.1)
+      simple_oauth (~> 0.3.1)
+    tzinfo (1.2.3)
+      thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf (0.1.4-java)
+    unf_ext (0.0.7.4)
+    unicode-display_width (1.3.0)
+    vcr (3.0.3)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+    webmock (3.0.1)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
+    zk (1.9.6)
+      zookeeper (~> 1.4.0)
+    zookeeper (1.4.11)
+    zookeeper (1.4.11-java)
+      slyphon-log4j (= 1.2.15)
+      slyphon-zookeeper_jar (= 3.3.5)
+
+PLATFORMS
+  java
+  ruby
+
+DEPENDENCIES
+  addressable
+  airbrussh
+  avro-builder
+  avro_turf
+  avromatic
+  awesome_print
+  aws-sdk
+  bcrypt_pbkdf
+  bugsnag (~> 5.5)
+  cap-ec2!
+  capistrano
+  capistrano-bundler
+  capistrano-rvm!
+  connection_pool
+  faraday
+  faraday_middleware
+  hashie
+  hiredis
+  koala
+  nokogiri
+  oauth2
+  pry
+  rack
+  rbnacl (~> 3.0)
+  rbnacl-libsodium
+  redis (>= 3.2.0)
+  redis-bloomfilter!
+  rspec
+  ruby-kafka!
+  rufus-scheduler (~> 3.0)
+  sidekiq
+  simplecov
+  soles!
+  timecop
+  twitter (~> 6.1)
+  vcr (~> 3.0)
+  virtus
+  webmock
+  zk
+
+BUNDLED WITH
+   1.16.1

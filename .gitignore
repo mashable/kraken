@@ -1,0 +1,10 @@
+log/*
+tmp/
+config/configs/secrets.yml
+config/local.yml
+.virtualenv
+.vscode
+coverage
+hive-json-schema-gen-1.0-SNAPSHOT.jar
+*.ddl
+.DS_Store

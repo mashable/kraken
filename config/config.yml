@@ -1,0 +1,80 @@
+# You can read these values with Soles.configuration.value("key") or Soles.configuration.value("tree_key.sub_key")
+
+common: &COMMON
+  aws:
+    bucket: kraken
+    credentials:
+      access_key_id: 'aws access key id'
+      secret_access_key: 'aws secret access key'
+      region: us-east-1
+  kraken:
+    user_agent: 'Mashable/Kraken-1.0'
+  bugsnag:
+    key: 'bugsnag key'
+  telegraf:
+    host: 127.0.0.1
+    port: 8125
+  twitter:
+    consumer_key: 'twitter consumer key'
+    consumer_secret: 'twitter consumer secret'
+
+
+development:
+  <<: *COMMON
+  zookeeper:
+    nodes:
+      - 192.168.4.139:32181
+    chroot: /kraken/development
+  kafka:
+    client_id: mashable-kraken-dev
+    connect: http://192.168.4.139:28082
+    registry_url: http://192.168.4.139:8081
+    seeds:
+      - 192.168.4.139:29092
+  redis:
+    url: redis://127.0.0.1:6379/1
+
+test:
+  <<: *COMMON
+  zookeeper:
+    nodes:
+      - 192.168.4.139:32181
+    chroot: /kraken/test
+  redis:
+    url: redis://127.0.0.1:6379/2
+  kafka:
+    client_id: mashable-kraken-test
+    connect: http://192.168.4.139:28082
+    seeds:
+      - 192.168.4.139:29092
+
+production:
+  <<: *COMMON
+  redis:
+    url: redis://sidekiq/15
+    sentinels:
+      - :host: host1-vir
+        :port: 26379
+      - :host: host2-vir
+        :port: 26379
+      - :host: host1-ore
+        :port: 26379
+      - :host: host2-ore
+        :port: 26379
+  zookeeper:
+    nodes:
+      - 127.0.0.1:2181
+      - 127.0.0.2:2181
+      - 127.0.0.3:2181
+    chroot: /kraken/production
+  kafka:
+    client_id: mashable-kraken-prod
+    registry_url: http://127.0.0.1:8081
+    connect:
+      - http://127.0.0.1:8083
+      - http://127.0.0.2:8083
+      - http://127.0.0.3:8083
+    seeds:
+      - 127.0.0.1:9092
+      - 127.0.0.2:9092
+      - 127.0.0.3:9092

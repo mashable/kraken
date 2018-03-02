@@ -1,0 +1,20 @@
+# integrate this config file into our connector settings
+connectors:
+  s3-sink:
+    connector.class: io.confluent.connect.s3.S3SinkConnector
+    storage.class: io.confluent.connect.s3.storage.S3Storage
+    format.class: io.confluent.connect.s3.format.json.JsonFormat
+    partitioner.class: io.confluent.connect.storage.partitioner.DefaultPartitioner
+    schema.generator.class: io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator
+    schema.compatibility: none
+    # We'll force a file to be written every 10k records or every hour
+    rotate.interval.ms: 3600000
+    flush.size: 10000
+    # This needs to be dynamic based on the environment being used!
+    topics.dir: development
+
+    tasks.max: 1
+    s3.bucket.name: kraken
+    s3.region: us-east-1
+    topics:
+      - kraken.twitter.tweets
